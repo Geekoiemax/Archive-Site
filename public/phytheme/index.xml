@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Phythemes on Maxchive</title>
+    <link>http://localhost:1313/Archive-Site/phytheme/</link>
+    <description>Recent content in Phythemes on Maxchive</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Archive-Site/phytheme/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Relativistic Cinematics - FR - 2024/2025</title>
+      <link>http://localhost:1313/Archive-Site/phytheme/complements_cinematique/</link>
+      <pubDate>Wed, 11 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/Archive-Site/phytheme/complements_cinematique/</guid>
+      
+        <description>&lt;p&gt;Ceci est une transcription des cours de cinématique relativiste donné par le professeur Xavier Ovido au lycée St Louis de Gonzague dans le cadre du club Phythème. Merci à lui pour ses excellents cours.&lt;/p&gt;
+&lt;h1 id=&#34;la-fin-de-lage-classique&#34;&gt;La fin de l&amp;rsquo;age classique&lt;/h1&gt;
+&lt;p&gt;A la fin du 19e siècle et au début du 20e, on trouve trois grandes théories.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;La mécanique de Newton&lt;/li&gt;
+&lt;li&gt;L&amp;rsquo;électromagnétisme de Maxwell (électricité + magnétisme + optique)&lt;/li&gt;
+&lt;li&gt;La thermodynamique&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;maxwell&#34;&gt;Maxwell&lt;/h2&gt;
+&lt;p&gt;Prédiction d&amp;rsquo;ondes électromagnétiques qui ont les même propriétés que la lumière et ont une vitese de propagation :&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

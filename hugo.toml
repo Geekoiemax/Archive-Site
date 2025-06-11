@@ -1,0 +1,15 @@
+baseURL = 'https://geekoiemax.github.io/Archive-Site/' # IMPORTANT: Change this to your actual GitHub Pages URL
+languageCode = 'en-us'
+title = 'Maxchive'
+theme = 'anatole'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$','$']]
+[params]
+  math = true
