@@ -1,6 +1,6 @@
 baseURL = 'https://geekoiemax.github.io/Archive-Site/' # IMPORTANT: Change this to your actual GitHub Pages URL
 languageCode = 'en-us'
-title = 'Maxchive'
+title = 'The Pi Files'
 theme = 'anatole'
 
 [markup]
