@@ -3,10 +3,12 @@ date = '2025-06-11'
 draft = false
 title = 'Relativistic Cinematics - FR - 2024/2025'
 pdf = "pdfs/cinematique_relativiste.pdf"
+categories = ["physics"]
+thumbnail = "thumbnails/thumbnail.png"
 +++
 
 
-Ceci est une transcription des cours de cinématique relativiste donné par le professeur Xavier Ovido au lycée St Louis de Gonzague dans le cadre du club Phythème. Merci à lui pour ses excellents cours.
+Ceci est une transcription des cours de cinématique relativiste donné par le professeur Xavier Ovido au lycée St Louis de Gonzague dans le cadre du club Phythème lors de l'année scolaire 2024-2025. Merci à lui pour ses excellents cours.
 
 # La fin de l'age classique
 A la fin du 19e siècle et au début du 20e, on trouve trois grandes théories.

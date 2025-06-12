@@ -11,7 +11,7 @@
   <title>
     
         |
-        Maxchive
+        The STEMLight Archives
       
 
     
@@ -35,6 +35,16 @@
     crossorigin="anonymous"
     type="text/css"
   />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/Archive-Site/css/custom.min.385079d5846d3678973c7e51cdac3966422cbf55218d92d91c8aefb1a0de96c0.css"
+      integrity="sha256-OFB51YRtNniXPH5Rzaw5ZkIsv1UhjZLZHIrvsaDelsA="
+      crossorigin="anonymous"
+      media="screen"
+    />
   
   
   <link
@@ -76,7 +86,7 @@
 
   <link rel="canonical" href="http://localhost:1313/Archive-Site/" />
   
-  <link rel="alternate" type="application/rss+xml" href="/Archive-Site/index.xml" title="Maxchive" />
+  <link rel="alternate" type="application/rss+xml" href="/Archive-Site/index.xml" title="The STEMLight Archives" />
   
   
   
@@ -108,14 +118,14 @@
   
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Maxchive">
+  <meta name="twitter:title" content="The STEMLight Archives">
 
 
 
   
   <meta property="og:url" content="http://localhost:1313/Archive-Site/">
-  <meta property="og:site_name" content="Maxchive">
-  <meta property="og:title" content="Maxchive">
+  <meta property="og:site_name" content="The STEMLight Archives">
+  <meta property="og:title" content="The STEMLight Archives">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
@@ -126,7 +136,7 @@
     {
       "@context": "http://schema.org",
       "@type": "WebSite",
-      "name": "Maxchive",
+      "name": "The STEMLight Archives",
       "url": "http:\/\/localhost:1313\/Archive-Site\/",
       "description": "",
       "thumbnailUrl": "http:\/\/localhost:1313\/Archive-Site\/",
@@ -276,19 +286,48 @@
   
 
   
+  <div id="tabs-container" style="margin-bottom: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+    
+    <button class="tab-btn" data-filter="all">All</button>
+    
+    <button class="tab-btn" data-filter="math">Math</button>
+    <button class="tab-btn" data-filter="physics">Physics</button>
+    <button class="tab-btn" data-filter="engineering">Engineering</button>
+  </div>
   
+
+
+  
+  <div id="posts-list">
+  
+
+  
+  
+  
+    
+      
+    
+  
+
     <div
-      class="post 
+      class="post post-item 
         animated fadeInDown
       "
+      data-categories="physics"
     >
+      
+        <div class="post__thumbnail-wrapper">
+          <a href="/Archive-Site/phytheme/complements_cinematique/">
+            <img class="post__thumbnail" src="/Archive-Site/thumbnails/thumbnail.png" alt="Thumbnail image" loading="lazy" />
+          </a>
+        </div>
       
       <div class="post__content">
         
           <h3><a href="/Archive-Site/phytheme/complements_cinematique/">RELATIVISTIC CINEMATICS - FR - 2024/2025</a></h3>
         
         
-          <p>Ceci est une transcription des cours de cinématique relativiste donné par le professeur Xavier Ovido au lycée St Louis de Gonzague dans le cadre du club Phythème. Merci à lui pour ses excellents cours.
+          <p>Ceci est une transcription des cours de cinématique relativiste donné par le professeur Xavier Ovido au lycée St Louis de Gonzague dans le cadre du club Phythème lors de l&rsquo;année scolaire 2024-2025. Merci à lui pour ses excellents cours.
 La fin de l&rsquo;age classique A la fin du 19e siècle et au début du 20e, on trouve trois grandes théories.
 La mécanique de Newton L&rsquo;électromagnétisme de Maxwell (électricité + magnétisme + optique) La thermodynamique Maxwell Prédiction d&rsquo;ondes électromagnétiques qui ont les même propriétés que la lumière et ont une vitese de propagation :
 </p>
@@ -307,15 +346,75 @@ La mécanique de Newton L&rsquo;électromagnétisme de Maxwell (électricité + 
           </span
         >
         
+          <span><a class="category" href="/Archive-Site/categories/physics/">physics</a></span>
+
+
+        
 
         
       </div>
     </div>
   
+  </div> 
   <div class="pagination">
     
 
   </div>
+
+  
+<script>
+  (function() {
+    
+    const tabs = document.querySelectorAll('#tabs-container .tab-btn');
+    const posts = Array.from(document.querySelectorAll('#posts-list .post-item'));
+
+    
+    function setActiveTab(button) {
+      tabs.forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-pressed', 'false');
+      });
+      button.classList.add('active');
+      button.setAttribute('aria-pressed', 'true');
+    }
+
+    
+    function filterPosts(category) {
+      let anyVisible = false;
+      posts.forEach(postEl => {
+        const cats = (postEl.dataset.categories || '').split(',').filter(s=>s);
+        if (category === 'all' || cats.includes(category)) {
+          postEl.style.display = '';
+          anyVisible = true;
+        } else {
+          postEl.style.display = 'none';
+        }
+      });
+      
+      const msg = document.getElementById('no-posts-message');
+      if (msg) msg.style.display = anyVisible ? 'none' : '';
+    }
+
+    
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        setActiveTab(this);
+        filterPosts(this.dataset.filter);
+      });
+    });
+
+    
+    const defaultTab = document.querySelector('#tabs-container .tab-btn[data-filter="all"]');
+    if (defaultTab) {
+      setActiveTab(defaultTab);
+      filterPosts('all');
+    }
+  })();
+</script>
+
+
+
+
 
       </main>
     </div><footer class="footer footer__base">

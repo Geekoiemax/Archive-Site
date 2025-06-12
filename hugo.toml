@@ -1,7 +1,10 @@
 baseURL = 'https://geekoiemax.github.io/Archive-Site/' # IMPORTANT: Change this to your actual GitHub Pages URL
 languageCode = 'en-us'
-title = 'The Pi Files'
+title = 'The STEMLight Archives'
 theme = 'anatole'
+
+[taxonomies]
+  category = "categories"
 
 [markup]
   [markup.goldmark]
@@ -13,3 +16,4 @@ theme = 'anatole'
           inline = [['\(', '\)'], ['$','$']]
 [params]
   math = true
+  customCss = ["css/custom.css"]
